@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap N Hatch Value List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a1f44;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: cyan;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid cyan;
+        }
+        th {
+            background-color: #06132b;
+        }
+        tr:nth-child(even) {
+            background-color: #112b57;
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+        img {
+            max-width: 100px;
+        }
+    </style>
+    <script>
+        function searchPets() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                let petName = row.cells[0].innerText.toLowerCase();
+                row.style.display = petName.includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Tap N Hatch - Pet Value List</h1>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search for a pet..." onkeyup="searchPets()">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Pet</th>
+                <th>Value (Diamonds)</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Secret Godron</td>
+                <td>500000</td>
+                <td><img src="image.jpg" alt="Secret Godron"></td>
+            </tr>
+    
+            <tr>
+                <td>Huge Cupcake</td>
+                <td>350000</td>
+                <td><img src="image.jpg" alt="Huge Cupcake"></td>
+            </tr>
+    
+            <tr>
+                <td>Chicken Cupcake</td>
+                <td>300000</td>
+                <td><img src="image.jpg" alt="Chicken Cupcake"></td>
+            </tr>
+    
+            <tr>
+                <td>Chicken Axolotl</td>
+                <td>300000</td>
+                <td><img src="image.jpg" alt="Chicken Axolotl"></td>
+            </tr>
+    
+            <tr>
+                <td>Limited Damson</td>
+                <td>200000</td>
+                <td><img src="image.jpg" alt="Limited Damson"></td>
+            </tr>
+    
+            <tr>
+                <td>Huge chicken</td>
+                <td>150000</td>
+                <td><img src="image.jpg" alt="Huge chicken"></td>
+            </tr>
+    
+            <tr>
+                <td>Exclusive Moon Kitsune</td>
+                <td>100000</td>
+                <td><img src="image.jpg" alt="Exclusive Moon Kitsune"></td>
+            </tr>
+    
+            <tr>
+                <td>Event RNG god</td>
+                <td>45000</td>
+                <td><img src="image.jpg" alt="Event RNG god"></td>
+            </tr>
+    
+            <tr>
+                <td>Shadow Kitsune</td>
+                <td>25000</td>
+                <td><img src="image.jpg" alt="Shadow Kitsune"></td>
+            </tr>
+    
+            <tr>
+                <td>Brainrot tralalero tralala</td>
+                <td>2000</td>
+                <td><img src="image.jpg" alt="Brainrot tralalero tralala"></td>
+            </tr>
+    
+            <tr>
+                <td>Deadpool</td>
+                <td>1000</td>
+                <td><img src="image.jpg" alt="Deadpool"></td>
+            </tr>
+    
+            <tr>
+                <td>Brainrot Tung Tung</td>
+                <td>500</td>
+                <td><img src="image.jpg" alt="Brainrot Tung Tung"></td>
+            </tr>
+    
+            <tr>
+                <td>Commons</td>
+                <td>10-50</td>
+                <td><img src="image.jpg" alt="Commons"></td>
+            </tr>
+    
+            <tr>
+                <td>Exclusives</td>
+                <td>50,000-100,000</td>
+                <td><img src="image.jpg" alt="Exclusives"></td>
+            </tr>
+    
+        </tbody>
+    </table>
+</body>
+</html>
